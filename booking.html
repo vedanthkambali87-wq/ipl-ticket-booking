@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4fa">
+  <title>Book IPL tickets | Matchday</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="booking">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Matchday home">
+        <span class="brand-mark" aria-hidden="true">IPL</span>
+        <span class="brand-name">MATCHDAY</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/booking" aria-current="page">Book tickets</a>
+        <a href="/history">History <span class="nav-count" id="booking-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <span class="eyebrow">YOUR MATCHDAY</span>
+        <h1>Choose your IPL match</h1>
+        <p>Choose a stadium to filter the matchups, pick your stand and see the estimated total before saving.</p>
+      </section>
+
+      <div class="booking-layout">
+        <section class="match-panel" aria-labelledby="match-panel-heading">
+          <span class="eyebrow">INDIAN PREMIER LEAGUE · SEASON 2027</span>
+          <h2 id="match-panel-heading">Feel every ball. Live every roar.</h2>
+          <p class="match-panel-copy">Get your group together and make match night one to remember.</p>
+
+          <div class="match-card" aria-live="polite">
+            <div class="match-meta">
+              <span id="fixture-round">SAMPLE FIXTURE 01</span>
+              <span class="match-format">T20 MATCH</span>
+            </div>
+            <div class="matchup">
+              <div class="team-block">
+                <span class="team-crest" id="home-crest" aria-hidden="true">CSK</span>
+                <strong id="home-team">Chennai Super Kings</strong>
+              </div>
+              <span class="versus">VS</span>
+              <div class="team-block">
+                <span class="team-crest team-crest--away" id="away-crest" aria-hidden="true">MI</span>
+                <strong id="away-team">Mumbai Indians</strong>
+              </div>
+            </div>
+            <div class="fixture-details">
+              <span id="featured-date">Mar 28, 2027</span>
+              <span id="featured-venue">Chennai</span>
+            </div>
+            <p class="sample-note">Illustrative fixture and pricing only — not an official IPL schedule or sale.</p>
+          </div>
+        </section>
+
+        <section class="card booking-card" aria-labelledby="booking-heading">
+          <h2 class="card-title" id="booking-heading">Book your seats</h2>
+          <p class="card-description">Your selection is saved in this browser. No payment is collected.</p>
+
+          <form id="booking-form">
+            <div class="form-grid">
+              <div class="field field--full">
+                <label for="stadium">Choose a stadium</label>
+                <select id="stadium" name="stadium" required>
+                  <option value="all">All stadiums</option>
+                  <option value="M. A. Chidambaram Stadium, Chennai">M. A. Chidambaram Stadium · Chennai</option>
+                  <option value="M. Chinnaswamy Stadium, Bengaluru">M. Chinnaswamy Stadium · Bengaluru</option>
+                  <option value="Rajiv Gandhi International Stadium, Hyderabad">Rajiv Gandhi International Stadium · Hyderabad</option>
+                  <option value="Narendra Modi Stadium, Ahmedabad">Narendra Modi Stadium · Ahmedabad</option>
+                  <option value="Arun Jaitley Stadium, Delhi">Arun Jaitley Stadium · Delhi</option>
+                  <option value="Wankhede Stadium, Mumbai">Wankhede Stadium · Mumbai</option>
+                  <option value="Eden Gardens, Kolkata">Eden Gardens · Kolkata</option>
+                  <option value="Sawai Mansingh Stadium, Jaipur">Sawai Mansingh Stadium · Jaipur</option>
+                  <option value="Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur">Maharaja Yadavindra Singh Stadium · Mullanpur</option>
+                  <option value="BRSABV Ekana Cricket Stadium, Lucknow">BRSABV Ekana Cricket Stadium · Lucknow</option>
+                </select>
+              </div>
+
+              <div class="field field--full">
+                <label for="event">Choose an IPL matchup</label>
+                <select id="event" name="event" required>
+                  <option value="Chennai Super Kings vs Mumbai Indians" data-home="CSK" data-away="MI"
+                    data-date="2027-03-28" data-venue="M. A. Chidambaram Stadium, Chennai">CSK vs MI · Chennai</option>
+                  <option value="Royal Challengers Bengaluru vs Kolkata Knight Riders" data-home="RCB" data-away="KKR"
+                    data-date="2027-03-29" data-venue="M. Chinnaswamy Stadium, Bengaluru">RCB vs KKR · Bengaluru</option>
+                  <option value="Sunrisers Hyderabad vs Rajasthan Royals" data-home="SRH" data-away="RR"
+                    data-date="2027-03-30" data-venue="Rajiv Gandhi International Stadium, Hyderabad">SRH vs RR · Hyderabad</option>
+                  <option value="Gujarat Titans vs Punjab Kings" data-home="GT" data-away="PBKS"
+                    data-date="2027-03-31" data-venue="Narendra Modi Stadium, Ahmedabad">GT vs PBKS · Ahmedabad</option>
+                  <option value="Delhi Capitals vs Lucknow Super Giants" data-home="DC" data-away="LSG"
+                    data-date="2027-04-01" data-venue="Arun Jaitley Stadium, Delhi">DC vs LSG · Delhi</option>
+                  <option value="Mumbai Indians vs Chennai Super Kings" data-home="MI" data-away="CSK"
+                    data-date="2027-04-02" data-venue="Wankhede Stadium, Mumbai">MI vs CSK · Mumbai</option>
+                  <option value="Kolkata Knight Riders vs Royal Challengers Bengaluru" data-home="KKR" data-away="RCB"
+                    data-date="2027-04-03" data-venue="Eden Gardens, Kolkata">KKR vs RCB · Kolkata</option>
+                  <option value="Rajasthan Royals vs Sunrisers Hyderabad" data-home="RR" data-away="SRH"
+                    data-date="2027-04-04" data-venue="Sawai Mansingh Stadium, Jaipur">RR vs SRH · Jaipur</option>
+                  <option value="Punjab Kings vs Gujarat Titans" data-home="PBKS" data-away="GT"
+                    data-date="2027-04-05" data-venue="Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur">PBKS vs GT · Mullanpur</option>
+                  <option value="Lucknow Super Giants vs Delhi Capitals" data-home="LSG" data-away="DC"
+                    data-date="2027-04-06" data-venue="BRSABV Ekana Cricket Stadium, Lucknow">LSG vs DC · Lucknow</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="ticketType">Choose your stand</label>
+                <select id="ticketType" name="ticketType" required>
+                  <option value="General Stand" data-price="1200">General Stand · ₹1,200</option>
+                  <option value="Premium Stand" data-price="2500">Premium Stand · ₹2,500</option>
+                  <option value="Hospitality" data-price="6000">Hospitality · ₹6,000</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="quantity">Tickets</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="8" step="1" value="1" required>
+              </div>
+            </div>
+
+            <input id="date" name="date" type="hidden">
+            <div class="fixture-summary" aria-live="polite">
+              <div>
+                <span>Match date</span>
+                <strong id="match-date">Mar 28, 2027</strong>
+              </div>
+              <div>
+                <span>Stadium</span>
+                <strong id="match-venue">M. A. Chidambaram Stadium, Chennai</strong>
+              </div>
+            </div>
+
+            <div class="price-summary" aria-live="polite">
+              <div>
+                <span>Price per ticket</span>
+                <strong id="price-per-ticket">₹1,200</strong>
+              </div>
+              <div class="price-total">
+                <span>Estimated total</span>
+                <strong id="booking-total">₹1,200</strong>
+              </div>
+            </div>
+
+            <div class="submit-row">
+              <button class="button" id="submit-booking" type="submit">Save matchday booking</button>
+              <p class="status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+            <p class="status" id="draft-status" role="status" aria-live="polite"></p>
+            <p class="storage-status" id="storage-status" role="alert" aria-live="polite"></p>
+          </form>
+
+          <p class="demo-note">Demo only: sample fixtures and prices. No real tickets, payments or reservations.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

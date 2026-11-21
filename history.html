@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4fa">
+  <title>Booking history | Matchday</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="history">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Matchday home">
+        <span class="brand-mark" aria-hidden="true">IPL</span>
+        <span class="brand-name">MATCHDAY</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/booking">Book tickets</a>
+        <a href="/history" aria-current="page">History <span class="nav-count" id="booking-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <span class="eyebrow">YOUR SAVED PASSES</span>
+        <h1>Booking history</h1>
+        <p>Review the IPL matchday bookings saved in this browser. Your history stays on this device.</p>
+      </section>
+
+      <section class="stats-grid" aria-label="Booking totals">
+        <div class="stat-card">
+          <span>Bookings</span>
+          <strong id="history-booking-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Tickets saved</span>
+          <strong id="history-ticket-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Estimated total</span>
+          <strong id="history-total">₹0</strong>
+        </div>
+      </section>
+
+      <section class="card history-card" aria-labelledby="history-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="history-heading">Your matchday bookings</h2>
+            <p>Demo bookings only — no real tickets are issued. You can remove a saved booking here.</p>
+          </div>
+          <a class="button" href="/booking">Book another match</a>
+        </div>
+
+        <p class="storage-status" id="storage-status" role="alert" aria-live="polite"></p>
+        <p class="status" id="history-status" role="status" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Reference</th>
+                <th scope="col">Match</th>
+                <th scope="col">Date</th>
+                <th scope="col">Stadium</th>
+                <th scope="col">Stand</th>
+                <th scope="col">Tickets</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="bookings-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
